@@ -1,18 +1,18 @@
 
-interface Product {
+export interface Product {
     description: string;
     price: number;
 }
 
-const phone: Product = {
-    description: "Smartphone",
-    price: 150
-}
+// const phone: Product = {
+//     description: "Smartphone",
+//     price: 150
+// }
 
-const tablet: Product = {
-    description: "The best tablet",
-    price: 300
-}
+// const tablet: Product = {
+//     description: "The best tablet",
+//     price: 300
+// }
 
 interface TaxCalculationOptions {
     tax: number,
@@ -29,7 +29,7 @@ interface TaxCalculationOptions {
 
 //     return [total, total * tax];
 // }
-function taxCalculation( options: TaxCalculationOptions ): [number, number] {
+export function taxCalculation( options: TaxCalculationOptions ): [number, number] {
     const {tax, products} = options;
     let total = 0;
 
@@ -40,16 +40,16 @@ function taxCalculation( options: TaxCalculationOptions ): [number, number] {
     return [total, total * tax];
 }
 
-const shoppingCart = [phone, tablet];
-const tax = 0.15;
+// const shoppingCart = [phone, tablet];
+// const tax = 0.15;
 
-const [ total, taxResult ] = taxCalculation({
-    products: shoppingCart,
-    tax,
-})
+// const [ total, taxResult ] = taxCalculation({
+//     products: shoppingCart,
+//     tax,
+// })
 
-console.log('Total:', total);
-console.log('Tax:', taxResult);
+// console.log('Total:', total);
+// console.log('Tax:', taxResult);
 
 //! SIN DESTRUCTURAR
 
@@ -75,7 +75,3 @@ console.log('Tax:', taxResult);
 // console.log('Tax:', result[1]);
 //console.log('Total + Tax', result[0] + result[1]);
 
-
-
-
-export {};
